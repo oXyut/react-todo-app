@@ -1,6 +1,13 @@
+import "./App.css"
+
+import { Stack, Box, Button, TextField } from "@mui/material";
+
 import { useState, useRef } from "react";
 import TodoList from "./TodoList";
 import {v4 as uuidv4} from "uuid";
+import { Container } from "@mui/system";
+
+
 
 function App() {
   const [todos, setTodos] = useState([]);
@@ -9,7 +16,7 @@ function App() {
 
   const handleAddTodo = () => {
     // タスクを追加する
-    // console.log(todoNameRef.current.value);
+    console.log(todoNameRef);
     const name = todoNameRef.current.value;
     if (name === "") return;
     setTodos((prevTodos) => {
@@ -31,13 +38,17 @@ function App() {
   }
 
   return (
-    <div>
-      <input type="text" ref={todoNameRef}/>
-      <button onClick={handleAddTodo} >タスクを追加</button>
-      <button onClick={handleClear} >完了したタスクの削除</button>
+    <Box>
+      <Container maxWidth="sm">
+    <Stack direction="row" alignItems="center" spacing={10}>
+      <TextField variant="standard" label="タスクを入力" type="text" inputRef={todoNameRef}/>
+      <Button variant="contained" onClick={handleAddTodo} >タスクを追加</Button>
+      <Button variant="contained" onClick={handleClear} >完了したタスクの削除</Button>
+    </Stack>
       <div>残りのタスク:{todos.filter((todo) => !todo.completed).length}</div>
     <TodoList todos={todos} toggleTodo={toggleTodo}/>
-    </div>
+      </Container>
+    </Box>
   );
 }
 
