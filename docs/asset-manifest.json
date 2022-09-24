@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/firebase-rdb-taskmanager/static/css/main.4a680ba1.css",
-    "main.js": "/firebase-rdb-taskmanager/static/js/main.375c8c91.js",
-    "index.html": "/firebase-rdb-taskmanager/index.html",
-    "main.4a680ba1.css.map": "/firebase-rdb-taskmanager/static/css/main.4a680ba1.css.map",
-    "main.375c8c91.js.map": "/firebase-rdb-taskmanager/static/js/main.375c8c91.js.map"
+    "main.css": "/react-todo-app/static/css/main.4a680ba1.css",
+    "main.js": "/react-todo-app/static/js/main.375c8c91.js",
+    "index.html": "/react-todo-app/index.html",
+    "main.4a680ba1.css.map": "/react-todo-app/static/css/main.4a680ba1.css.map",
+    "main.375c8c91.js.map": "/react-todo-app/static/js/main.375c8c91.js.map"
   },
   "entrypoints": [
     "static/css/main.4a680ba1.css",
